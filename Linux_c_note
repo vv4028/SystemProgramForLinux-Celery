@@ -1,11 +1,12 @@
 I/O：input & output，是一切实现的基础
-stdio标准IO 
+stdio标准IO
 sysio系统调用IO（文件IO）
 
 stdio:FILE类型贯穿始终
 
 fopen();
 fclose();
+
 fgetc();
 fputc();
 fgets();
@@ -20,4 +21,13 @@ fseek();
 ftell();
 rewind();
 
+fseeko();
+fteelo();
+
 fflush();
+
+getline();
+
+临时文件：1、如何不冲突的创建临时文件 2、及时销毁
+tmpnam
+tmpfile
