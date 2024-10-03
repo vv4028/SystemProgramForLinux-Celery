@@ -1,0 +1,40 @@
+文件IO/系统调用IO
+文件描述符(fd)是在文件IO中贯穿始终的类型
+
+文件描述符的概念(int 整形数)
+文件描述符优先使用当前可用范围内最小的
+
+文件IO操作相关函数：open，close，read，write，lseek
+r-> O_RDONLY
+r+ -> O_RDWR
+w -> O_WRONLY|O_CREAT|O_TRUNC
+w+ -> O_RDWR|O_TRUNC|O_CREAT
+
+文件IO与标准IO的区别
+区别：响应速度&吞吐量
+文件IO的响应速度快
+标准IO的吞吐量快
+
+如何使一个程序变快？ ->
+
+IO的效率问题
+
+文件共享:多个任务共同操作一个文件或者协同完成任务
+写程序删除一个文件的第10行。
+
+truncate
+ftruncate
+
+
+原子操作:不可分割的操作
+原子操作的作用：解决竞争和冲突
+
+程序中的重定向：dup,dup2
+
+同步：sync,fsync,fdatasync
+
+fcntl():文件描述符相关的操作
+
+ioctl(): 设备相关的内容
+
+/dev/fd/目录:虚目录，显示当前进程的描述符信息
