@@ -1,0 +1,57 @@
+类似ls的实现，如myls
+
+一、目录和文件
+1、获取文件属性
+    stat:通过文件路径获取属性，面对符号链接文件时获取的是所指向目标文件的属性
+    fstat：通过文件描述符获取属性
+    lstat：面对符号链接文件时获取的是符号链接文件的属性
+2、文件访问权限
+    st_mode是一个16位的位图，用于标志文件类型，文件访问权限，及特殊权限
+3、umask
+    作用：防止产生权限过松的文件
+4、文件权限的更改/管理
+    chmod fchmod
+5、粘住位
+    t位
+
+6、文件系统:FAT,UFS
+    文件系统：文件或数据的存储和管理
+
+7、硬链接，符号链接
+    硬链接 ln <source> <dest> 硬链接与目录项是同义词，且建立硬链接有限制：不能给分区建立，不能给建立。
+    符号连接 ln -s <source> <dest> 优点：可跨分区，可以给目录建立
+    link 
+    unlink
+    remove
+    rename
+
+8、utime
+    修改最后一次读文件和修改文件
+9、目录的创建和销毁
+    mkdir
+    rmdir:只能删除空目录../repo/repo init -u https://gitee.com/weid
+ongshan/manifests.git -b linux-sdk -m stm32mp1/100ask_stm32mp157_pro_release-v2.0.x
+ml --no-repo-verify
+10、更改当前工作路径
+    chdir
+    fchdir
+    getcwd
+11、分析目录/读取目录内容
+    glob()
+
+
+
+    opendir();
+    closedir();
+    readdir();
+    rewinddir();
+    seekdir();
+    telldir();
+
+二、系统数据文件和信息
+
+
+
+
+
+三、进程环境
