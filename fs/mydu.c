@@ -53,6 +53,7 @@ static int64_t mydu(const char *path)
             sum += mydu(globres.gl_pathv[i]);
     }
 
+    globfree(&globres);
     return sum;
 }
 
