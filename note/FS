@@ -29,9 +29,8 @@
     修改最后一次读文件和修改文件
 9、目录的创建和销毁
     mkdir
-    rmdir:只能删除空目录../repo/repo init -u https://gitee.com/weid
-ongshan/manifests.git -b linux-sdk -m stm32mp1/100ask_stm32mp157_pro_release-v2.0.x
-ml --no-repo-verify
+    rmdir:只能删除空目录
+
 10、更改当前工作路径
     chdir
     fchdir
