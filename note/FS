@@ -49,9 +49,76 @@ ml --no-repo-verify
     telldir();
 
 二、系统数据文件和信息
+1 /etc/passwd
+    getpwuid();
+    getpwnam();
 
+2 /etc/group
+    getgrgid();
+    getgrnam();
 
+3 /etc/shadow
+    getspnam();
+    crypt();
+    getpass();
+
+4 时间戳:time_t char* (struct tm)
+    time();
+    gmtime();
+    localtime();
+    mktime();
+    strftime();
 
 
 
 三、进程环境
+
+1 main函数
+    int main(int argc,char *argv[])
+
+2 进程的终止情况
+    正常终止：
+        从main函数返回
+        调用exit函数
+        调用_exit或_Exit
+        最后一个线程从其启动例程返回
+        最后一个线程调用pthread_exit
+
+    异常终止：
+        调用abort
+        接到一个信号并终止
+        最后一个线程对其取消请求作出响应
+
+    atexit():钩子函数
+
+3 命令行参数的分析
+    getopt();
+    getopt_long();
+
+4 环境变量
+    KEY = VALUE
+    environ
+
+    getenv();
+    setenv();
+    putenv();
+
+5 C程序的存储空间布局
+    pmap(1);
+
+6 库
+    动态库
+    静态库
+    手工装载库
+    dlopen();
+    dlclose();
+    dlerror();
+    dlsym();
+
+7 函数跳转
+    goto
+    setjmp();
+    longjmp();当第二参数设置为零时，会被替换为1
+8 资源的获取及控制
+    getrlimit();获取资源总量
+    setrlimit();设置资源总量
